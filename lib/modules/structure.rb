@@ -14,10 +14,10 @@ module Structure
 		File.new("#{camelize app_name}.rb", "w")
 	end
 
-	def self.remove app_name location=nil
+	def self.remove app_name,location=nil
 
 
-		
+
 	end
 
 private

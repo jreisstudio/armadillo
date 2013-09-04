@@ -14,7 +14,7 @@ describe Structure do
 	end
 
 	it "creates a new structure passing a location as parameter " do
-		location = "/Users/jreisstudio/projetos/arduino/armadillo"
+		location = Pathname.pwd.to_s
 		Structure::create "new app b", location
 		Dir.chdir "#{location}/new_app_b"
 		File.exist?("new_app_b.ino").should be_true 

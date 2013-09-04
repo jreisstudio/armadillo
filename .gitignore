@@ -4,7 +4,7 @@ coverage.data
 
 # rdoc generated
 rdoc
-
+.vagrant
 # yard generated
 doc
 .yardoc
