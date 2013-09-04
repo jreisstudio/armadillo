@@ -1,5 +1,5 @@
 require "pathname"
-
+require "fileutils"
 module Structure
 
 	def self.create  app_name,location=nil
@@ -15,8 +15,8 @@ module Structure
 	end
 
 	def self.remove app_name,location=nil
-
-
+		location = Pathname.pwd.to_s if location == nil
+		FileUtils.rm_rf("#{location}/#{camelize app_name}")
 
 	end
 

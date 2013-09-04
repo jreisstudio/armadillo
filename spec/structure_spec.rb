@@ -25,11 +25,19 @@ describe Structure do
 	end
 
 	it "removes the structure using default location " do
+		location = Pathname.pwd.to_s
+		app_name = "new_app"
+		Structure::remove app_name
+		Dir.chdir "#{location}"
+		Dir.exist?(app_name).should be_false 
 
 	end
 
 	it "removes the structure passing a location as parameter " do
-
+		location = Pathname.pwd.to_s
+		app_name = "new_app_b"
+		Structure::remove app_name,location
+		Dir.exist?(app_name).should be_false 
 	end
 
 end
