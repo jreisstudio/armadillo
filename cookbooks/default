@@ -1,9 +1,0 @@
-#! /usr/bin/env bash
-
-apt-get update > /dev/null
-apt-get install --yes --force-yes curl libxml2 ruby-dev
-
-gem install bundler
-
-su - vagrant -c "cd /vagrant ; mkdir ~/vendor ; ln -sf ˜/vendor" 
-su - vagrant -c "cd /vagrant ; bundle install --path vendor/bundle"
